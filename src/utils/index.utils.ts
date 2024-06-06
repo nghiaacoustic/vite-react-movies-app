@@ -1,4 +1,4 @@
-import { config } from '@/constants/config.constant'
+import { CONFIG } from '@/constants/config.constant'
 import DefaultBanner from '@/assets/default-banner.png'
 import DefaultImage from '@/assets/default-image.png'
 import { CreditProfileInterface, Profile } from '@/models'
@@ -10,7 +10,7 @@ export const getImage = (
   if (!url) {
     return isBackdropImage ? DefaultBanner : DefaultImage
   }
-  return `${config.baseImageUrl}${url}`
+  return `${CONFIG.baseImageUrl}${url}`
 }
 
 export const roundedNumber = (value: number, decimal: number = 1): number => {
@@ -66,7 +66,7 @@ export const getProfilesSortedByPopularity = (
     .map(
       (profile) =>
         profile?.known_for_department?.toLowerCase() ===
-          department.toLowerCase() && {
+        department.toLowerCase() && {
           id: profile.id,
           name: profile.name,
           profilePath: profile.profile_path!,

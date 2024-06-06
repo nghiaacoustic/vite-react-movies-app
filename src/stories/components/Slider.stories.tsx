@@ -1,7 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { MovieCard, Slider, SliderProps } from '@/components'
-import { MovieListMock } from '@/tests/mocks'
+// import { MOVIE_LIST_MOCK } from '@/tests/mocks'
 import { Movie } from '@/models'
+import { MOVIE_LIST } from './data/movie.data'
 
 const Component: React.FC<SliderProps> = (args) => (
   <div className='h-[330px] w-screen'>
@@ -21,7 +22,7 @@ export default meta
 
 type Story = StoryObj<typeof meta>
 
-const mockListMovies = MovieListMock.results
+const mockListMovies = MOVIE_LIST
 export const SliderComponent: Story = {
   args: {
     children: mockListMovies.map((movie: Movie) => (

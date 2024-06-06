@@ -1,4 +1,8 @@
-# Canal-Plus
+# Canal+
+
+## Author
+
+Nghia Truong Phuoc - NghiaTP1@fpt.com
 
 ## Description
 

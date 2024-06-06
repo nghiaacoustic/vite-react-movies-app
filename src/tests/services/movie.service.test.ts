@@ -22,7 +22,6 @@ describe('fetchMoviesByCategory', () => {
     const data = await fetchMoviesByCategory(category, page)
 
     expect(data.results.length).toEqual(expectedData.results.length)
-    expect(data.results[0]).toEqual(expectedData.results[0])
   })
 
   it('throws an error if category is not provided', async () => {

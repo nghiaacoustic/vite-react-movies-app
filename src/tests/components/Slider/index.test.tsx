@@ -3,14 +3,14 @@ import { render, screen, fireEvent, waitFor } from '@testing-library/react'
 import { describe, it, expect } from 'vitest'
 import { MemoryRouter } from 'react-router-dom'
 import { Slider } from '@/components/Slider'
-import { MovieListMock } from '@/tests/mocks'
 import { MovieCard, ProfileCard } from '@/components'
 import { Movie } from '@/models'
-import { ProfileListMock } from '@/tests/mocks/data/profiles'
+import { MOVIE_LIST_MOCK } from '@/tests/mocks'
+import { PROFILE_LIST_MOCK } from '@/tests/mocks/data/profiles'
 
 describe('Slider component', () => {
-  const mockListMovies = MovieListMock.results
-  const mockListProfiles = ProfileListMock
+  const mockListMovies = MOVIE_LIST_MOCK.results
+  const mockListProfiles = PROFILE_LIST_MOCK
 
   const renderComponent = (
     title: string,

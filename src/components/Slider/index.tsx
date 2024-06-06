@@ -51,13 +51,13 @@ export const Slider: React.FC<SliderProps> = ({
           {title}
         </h2>
         {isExpanable && (
-          <div className='select-none  transition-opacity duration-500 ease-in-out transform opacity-0 group-hover:opacity-100  text-xl font-bold pr-2'>
+          <div className='select-none transition-opacity duration-500 ease-in-out transform opacity-0 group-hover:opacity-100 text-xl font-bold pr-2'>
             <Link
               className='flex-items-row cursor-pointer text-red-primary'
               to={`/movies/${convertToSnakeCase(title)}`}
             >
               <IoIosArrowForward />
-              <span className='text-sm '>Explore All</span>
+              <span className='text-sm'>Explore All</span>
             </Link>
           </div>
         )}

@@ -1,11 +1,11 @@
-import { config } from '@/constants/config.constant'
+import { CONFIG } from '@/constants/config.constant'
 import { Category, MovieRequestParams } from '@/models'
 import { ListMovieSchema, MovieSchema } from '@/schemas/movie.schema'
 import { getCurrentDateFormatted } from '@/utils/index.utils'
 import axios from 'axios'
 
 const api = axios.create({
-  baseURL: config.baseUrlAPI,
+  baseURL: CONFIG.baseUrlAPI,
   headers: {
     'Content-Type': 'application/json'
   }
@@ -43,7 +43,7 @@ export const fetchMoviesByCategory = async (
   try {
     const response = await api.get(`/discover/movie`, {
       params: {
-        api_key: config.apiKey,
+        api_key: CONFIG.apiKey,
         page,
         ...requestParams
       }
@@ -71,7 +71,7 @@ export const fetchMovieDetail = async (id: string) => {
   try {
     const response = await api.get(`/movie/${id}`, {
       params: {
-        api_key: config.apiKey,
+        api_key: CONFIG.apiKey,
         ...requestParams
       }
     })
@@ -96,7 +96,7 @@ export const fetchPeopleDetail = async (id: string) => {
   try {
     const response = await api.get(`/movie/${id}`, {
       params: {
-        api_key: config.apiKey
+        api_key: CONFIG.apiKey
       }
     })
     const data = MovieSchema.parse(response.data)

@@ -1,6 +1,6 @@
 import { CreditProfileInterface } from '@/models'
 
-export const ProfileListMock: CreditProfileInterface[] = [
+export const PROFILE_LIST_MOCK: CreditProfileInterface[] = [
   {
     adult: false,
     gender: 1,

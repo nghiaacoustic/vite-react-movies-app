@@ -4,13 +4,13 @@ import { describe, it, expect, Mock } from 'vitest'
 import { useQuery } from '@tanstack/react-query'
 import { useParams } from 'react-router-dom'
 import Movies from '@/pages/Movies'
-import { MovieListMock } from '@/tests/mocks'
+import { MOVIE_LIST_MOCK } from '@/tests/mocks'
 
 vi.mock('@/services/movie.service', () => ({
   fetchMoviesByCategory: vi.fn()
 }))
 
-const mockMovies = MovieListMock
+const mockMovies = MOVIE_LIST_MOCK
 describe('Movies Component', () => {
   beforeEach(() => {
     vi.clearAllMocks()

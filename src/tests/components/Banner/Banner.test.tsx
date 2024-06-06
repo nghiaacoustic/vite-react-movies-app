@@ -3,7 +3,7 @@ import { fireEvent, render, screen, waitFor } from '@testing-library/react'
 import { BrowserRouter } from 'react-router-dom'
 import { Banner } from '@/components/Banner'
 import { Movie } from '@/models'
-import { MovieListMock } from '@/tests/mocks'
+import { MOVIE_LIST_MOCK } from '@/tests/mocks'
 
 vi.mock('@/utils/index.utils', () => ({
   formatDate: vi.fn((date: string) => date),
@@ -20,14 +20,14 @@ describe('Banner component', () => {
     )
   }
   it('should initial display banner skeleton', async () => {
-    renderComponent(MovieListMock.results[0], true)
+    renderComponent(MOVIE_LIST_MOCK.results[0], true)
     await waitFor(() => {
       expect(screen.queryByTestId('banner-skeleton')).toBeInTheDocument()
     })
   })
 
   it('should display movie details when not loading', () => {
-    renderComponent(MovieListMock.results[0], false)
+    renderComponent(MOVIE_LIST_MOCK.results[0], false)
 
     expect(
       screen.getByText('Kingdom of the Planet of the Apes')
@@ -40,7 +40,7 @@ describe('Banner component', () => {
   })
 
   it('should navigate to movie details when "More Info" button is clicked', () => {
-    renderComponent(MovieListMock.results[0], false)
+    renderComponent(MOVIE_LIST_MOCK.results[0], false)
 
     const moreInfoButton = screen.getByText('More Info')
     expect(moreInfoButton).toBeInTheDocument()
@@ -54,7 +54,7 @@ describe('Banner component', () => {
   })
 
   it('should match snapshot with movie details', () => {
-    renderComponent(MovieListMock.results[0], false)
+    renderComponent(MOVIE_LIST_MOCK.results[0], false)
     expect(screen).toMatchSnapshot()
   })
 })

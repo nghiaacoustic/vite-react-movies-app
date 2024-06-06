@@ -2,12 +2,12 @@ import { describe, it, expect } from 'vitest'
 import { render } from '@testing-library/react'
 import { ProfileCard } from '@/components'
 import { CreditProfileInterface } from '@/models'
-import { ProfileListMock } from '@/tests/mocks/data/profiles'
+import { PROFILE_LIST_MOCK } from '@/tests/mocks/data/profiles'
 import { Route } from 'react-router-dom'
 import { customRender } from '@/tests/mocks'
 
 describe('ProfileCard component', () => {
-  const profile: CreditProfileInterface = ProfileListMock[0]
+  const profile: CreditProfileInterface = PROFILE_LIST_MOCK[0]
 
   const renderComponent = () => {
     return customRender(

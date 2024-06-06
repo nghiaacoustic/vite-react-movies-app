@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom'
 import MovieDetail from '@/pages/MovieDetail'
 import { CreditProfileInterface } from '@/models'
 import { getProfilesSortedByPopularity } from '@/utils/index.utils'
-import { ProfileListMock } from '@/tests/mocks/data/profiles'
+import { PROFILE_LIST_MOCK } from '@/tests/mocks/data/profiles'
 
 describe('MovieDetail Component', () => {
   beforeEach(() => {
@@ -70,7 +70,7 @@ describe('MovieDetail Component', () => {
   })
 
   describe('getProfilesSortedByPopularity Function', () => {
-    const profiles: CreditProfileInterface[] = ProfileListMock
+    const profiles: CreditProfileInterface[] = PROFILE_LIST_MOCK
     it('should map profiles to the desired structure', () => {
       const mappedProfiles = getProfilesSortedByPopularity(profiles, 'acting')
 

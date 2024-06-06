@@ -2,11 +2,11 @@ import { render, screen, waitFor } from '@testing-library/react'
 import { describe, it, expect } from 'vitest'
 import { MovieList } from '@/components'
 import { Movie } from '@/models'
-import { customRender, MovieListMock } from '@/tests/mocks'
+import { customRender, MOVIE_LIST_MOCK } from '@/tests/mocks'
 import { Route } from 'react-router-dom'
 
 describe('MovieList component', () => {
-  const movies: Movie[] = MovieListMock.results
+  const movies: Movie[] = MOVIE_LIST_MOCK.results
 
   const renderComponent = () => {
     return customRender(

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-interface ErrorProps {
+type ErrorProps = {
   errorMessage: string
 }
 

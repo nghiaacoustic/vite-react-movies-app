@@ -1,6 +1,6 @@
 import { ListMovie } from '@/models'
 
-export const MovieListMock: ListMovie = {
+export const MOVIE_LIST_MOCK: ListMovie = {
   page: 1,
   results: [
     {
