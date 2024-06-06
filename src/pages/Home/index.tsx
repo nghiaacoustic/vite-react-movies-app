@@ -21,7 +21,8 @@ const HomePage: React.FC = () => {
 
   const showToastError = () => {
     return errorMessage?.map(
-      (error) => error && <ToastError errorMessage={`${error}`} />
+      (error, index) =>
+        error && <ToastError key={index} errorMessage={`${error}`} />
     )
   }
 

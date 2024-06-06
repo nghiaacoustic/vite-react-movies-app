@@ -14,7 +14,7 @@ const Movies: React.FC = () => {
   const { category } = useParams()
 
   const [page, setPage] = useState<number>(1)
-  const [listMovies, setListMovies] = useState<Movie[]>([])
+  const [movies, setMovies] = useState<Movie[]>([])
   const { data, error, isLoading } = useQuery<ListMovie>({
     queryKey: ['movies', category, page],
     queryFn: () => fetchMoviesByCategory(category! as Category, page),
@@ -23,9 +23,9 @@ const Movies: React.FC = () => {
 
   useEffect(() => {
     if (data?.results) {
-      setListMovies((prevMovies) => [...prevMovies, ...data.results])
+      setMovies((prevMovies) => [...prevMovies, ...data.results])
     }
-  }, [data?.results, setListMovies])
+  }, [data?.results, movies])
 
   const handleLoadMore = () => {
     setPage((prevPage) => prevPage + 1)
@@ -47,11 +47,11 @@ const Movies: React.FC = () => {
     <>
       <Banner
         isLoading={isLoading}
-        movie={getFirstMovieWithBackdropAvailalbe(listMovies)}
+        movie={getFirstMovieWithBackdropAvailalbe(movies)}
       />
       {
         <MovieList
-          movies={listMovies}
+          movies={movies}
           isLoading={isLoading}
           title={category ?? ''}
         />

@@ -1,5 +1,5 @@
 import React from 'react'
-import { useParams, useNavigate } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import { Movie } from '@/models'
 import { BannerSkeleton } from '@/components'
 import { formatDate, getImage, roundedNumber } from '@/utils/index.utils'
@@ -12,13 +12,9 @@ export type BannerProps = {
 
 export const Banner: React.FC<BannerProps> = ({ movie, isLoading }) => {
   const { id } = useParams<{ id: string }>()
-  const navigate = useNavigate()
 
   if (isLoading) {
     return <BannerSkeleton />
-  }
-  const navigateToDetail = () => {
-    navigate(`/movie/${movie?.id}`, { replace: true })
   }
 
   return (
@@ -42,12 +38,12 @@ export const Banner: React.FC<BannerProps> = ({ movie, isLoading }) => {
 
         {!id ? (
           <div>
-            <button
+            <Link
               className='text-lg px-6 py-2 bg-red-600 hover:bg-red-700 text-white-primary rounded transition-colors ease-in-out duration-100'
-              onClick={navigateToDetail}
+              to={`/movie/${movie?.id}`}
             >
               More Info
-            </button>
+            </Link>
           </div>
         ) : (
           <div className='space-y-2'>

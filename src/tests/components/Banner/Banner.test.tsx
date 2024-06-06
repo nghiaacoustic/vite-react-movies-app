@@ -46,6 +46,9 @@ describe('Banner component', () => {
     expect(moreInfoButton).toBeInTheDocument()
 
     fireEvent.click(moreInfoButton)
+    expect(window.location.pathname).toBe(
+      `/movie/${MOVIE_LIST_MOCK.results[0].id}`
+    )
   })
 
   it('should match snapshot when loading', () => {
