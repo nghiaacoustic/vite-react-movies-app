@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    @apply text-sm font-medium font-sans leading-none;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+  }
+
+  * {
+    @apply m-0 p-0 box-border;
+  }
+
+  body {
+    @apply text-white-primary bg-black-primary bg-blend-darken cursor-default;
+  }
+
+  ::-webkit-scrollbar {
+    @apply hidden;
+  }
+}
+
+@layer utilities {
+  .flex-items-center {
+    @apply flex items-center;
+  }
+
+  .flex-full-center {
+    @apply flex items-center justify-center;
+  }
+
+  .flex-items-col {
+    @apply flex items-center flex-col;
+  }
+
+  .flex-items-row {
+    @apply flex items-center flex-row;
+  }
+}

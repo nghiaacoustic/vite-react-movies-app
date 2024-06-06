@@ -1,0 +1,50 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Header component > should match snapshot 1`] = `
+<DocumentFragment>
+  <header
+    class="fixed flex-items-center justify-between py-4 px-8 w-full bg-gradient-to-r from-black-secondary via-transparent to-transparent transition duration-300 ease-in-out top-0 z-50"
+  >
+    <div
+      class="flex-items-center"
+    >
+      <a
+        aria-current="page"
+        class="active"
+        href="/"
+      >
+        <img
+          alt="Logo"
+          class="h-10 mr-10 cursor-pointer"
+          src="/src/assets/fpt-logo.png"
+        />
+      </a>
+      <nav
+        class="ml-auto"
+      >
+        <ul
+          class="flex space-x-4"
+        >
+          <li>
+            <a
+              aria-current="page"
+              class="font-bold text-white-primary text-xl text-white-secondary hover:text-white-hover"
+              href="/"
+            >
+              Home
+            </a>
+          </li>
+          <li>
+            <a
+              class="font-thin text-white-secondary text-xl text-white-secondary hover:text-white-hover"
+              href="/movies/latest"
+            >
+              Movies
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+</DocumentFragment>
+`;
