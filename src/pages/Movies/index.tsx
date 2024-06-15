@@ -25,7 +25,7 @@ const Movies: React.FC = () => {
     if (data?.results) {
       setMovies((prevMovies) => [...prevMovies, ...data.results])
     }
-  }, [data?.results, movies])
+  }, [data?.results, setMovies])
 
   const handleLoadMore = () => {
     setPage((prevPage) => prevPage + 1)
@@ -49,13 +49,7 @@ const Movies: React.FC = () => {
         isLoading={isLoading}
         movie={getFirstMovieWithBackdropAvailalbe(movies)}
       />
-      {
-        <MovieList
-          movies={movies}
-          isLoading={isLoading}
-          title={category ?? ''}
-        />
-      }
+      <MovieList movies={movies} isLoading={isLoading} title={category ?? ''} />
       <div className='text-center flex-full-center py-2 bg-black-primary'>
         <button
           className=' text-red-primary bg-transparent flex-items-center justify-start gap-2 border-white-primary border-2 p-4 rounded-md hover:text-red-hover duration-500'
