@@ -2,7 +2,7 @@
 
 ## Author
 
-Nghia Truong Phuoc - NghiaTP1@fpt.com
+Nghia Truong Phuoc
 
 ## Description
 
@@ -25,14 +25,14 @@ Canal+ displays a list of popular movies, a list of latest movies, and allows us
 
 The project follows a standard React project structure:
 
-- `src/`: Contains the source code of the project.
+- `src/`: Contains the project's source code.
   - `assets/`: Contains static assets such as images and styles.
   - `components/`: Contains React components used throughout the application.
   - `constants/`: Contains constant values used across the application.
   - `models/`: Contains data models and types used within the application.
   - `pages/`: Contains React components representing different pages/routes of the application.
   - `stories/`: Contains Storybook stories for components.
-  - `styles/`: Contains global tailwind css styles.
+  - `styles/`: Contains global tailwind CSS styles.
   - `utils/`: Contains utility functions used across the application.
   - `tests/`: Contains unit tests for components, utility functions, and other modules.
   - `schema/`: Contains Zod schemas for data validation.
@@ -83,7 +83,7 @@ To run Storybook: npm run storybook (UI available at http://localhost:5000/)
 - **axios**: Promise-based HTTP client for making API requests.
 - **react**: JavaScript library for building user interfaces.
 - **react-dom**: Provides DOM-specific methods that can be used at the top level of a web app to enable React components.
-- **react-icons**: Library providing popular icon sets for React.
+- **react-icons**: The library is providing popular icon sets for React.
 - **react-router-dom**: DOM bindings for React Router, allowing navigation in a React application.
 - **zod**: TypeScript-first schema declaration and validation library.
 
@@ -97,7 +97,7 @@ To run Storybook: npm run storybook (UI available at http://localhost:5000/)
 - **@storybook/react**: UI development environment for building UI components in isolation.
 - **@storybook/react-vite**: Vite integration for Storybook.
 - **@storybook/testing-library**: Integration between Storybook and Testing Library.
-- **@testing-library/jest-dom**: Custom jest matchers for asserting on DOM nodes.
+- **@testing-library/jest-dom**: Custom jest matches for asserting on DOM nodes.
 - **@testing-library/react**: Simple and complete testing utilities for React.
 - **@testing-library/user-event**: Simulate events for Testing Library.
 - **@types/node**: Type definitions for Node.js.
